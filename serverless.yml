@@ -1,0 +1,11 @@
+service: aws-ec2
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: us-west-1
+
+
+resources:
+  # create the EC2 resource file
+  - ${file(resources/ec2.yml)}
